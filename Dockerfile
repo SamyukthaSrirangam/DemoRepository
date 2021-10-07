@@ -1,3 +1,2 @@
-FROM openjdk:8
-RUN javac helloworld.java
-CMD ["java" ,"helloworld"]
+FROM tomcat:8
+COPY target/*.war /usr/local/tomcat/webapps
